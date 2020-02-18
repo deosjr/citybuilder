@@ -1,0 +1,23 @@
+[package]
+name = "citybuilder"
+version = "0.1.0"
+authors = ["Sjoerd Dost <deosjr@gmail.com>"]
+edition = "2018"
+autobins = false
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies.tcod]
+git = "https://github.com/tomassedovic/tcod-rs.git"
+
+# These are the games that can be built using the game lib on top of tcod
+# `cargo build` will build all of them, can build a single one using bin flag (see below)
+# `cargo run` needs to know which one to run, use `--bin name` i.e. `cargo run --bin anno`
+
+[[bin]]
+name = "anno"
+path = "src/bin/anno.rs"
+
+[[bin]]
+name = "zeus"
+path = "src/bin/zeus.rs"
